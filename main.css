@@ -20,7 +20,6 @@
 /* create date */
 #date {
   width: 700px;
-  height: 30px;
   background: var(--main-color);
   color: black;
   padding: 10px;
@@ -29,16 +28,21 @@
 }
 /* create map */
 .btn {
+  pointer-events: auto;
   display: inline;
   border-radius: 4px;
   background-color: var(--main-color);
   cursor: pointer;
 }
+
+.btn *{
+  pointer-events: none;
+}
 .nice-place {
   padding: 100px 0;
 }
 
-.row {
+.nice-place-content{
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -46,12 +50,12 @@
   gap: 30px 0;
 }
 
-.container {
+.container-x {
   max-width: 1024px;
   margin: auto;
 }
 
-.container .member-img {
+.container-x .member-img {
   width: 400px;
   height: 300px;
   /* margin-top: 30px; */
@@ -91,6 +95,7 @@
 }
 
 .nice-place-text {
+  pointer-events: none;
   position: absolute;
   width: 100%;
   /* height: 100px; */
@@ -114,13 +119,12 @@
 }
 
 .nice-place-text p {
+  --line-clamp: 1;
   color: white;
   margin: 0;
 }
 
 .nice-place-text button {
-  height: 30px;
-  width: 100px;
   background-color: var(--main-color);
   border: none;
   color: #fff;
