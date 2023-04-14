@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100;1,300;1,400&display=swap");
+
+:root {
+  --main-color: #6dbfe2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* create date */
+#date {
+  width: 700px;
+  height: 30px;
+  background: var(--main-color);
+  color: black;
+  padding: 10px;
+  font-family: arial;
+  font-size: 2em;
+}
+/* create map */
+.btn {
+  display: inline;
+  border-radius: 4px;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+.nice-place {
+  padding: 100px 0;
+}
+
+.row {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.container .member-img {
+  width: 400px;
+  height: 300px;
+  /* margin-top: 30px; */
+  border-radius: 2px;
+  object-fit: cover;
+  transform: scale(2);
+}
+
+.nice-place-img img {
+  transition: all 2s ease;
+}
+
+.nice-place-img img:hover {
+  /* width: 320px;
+  height: 280px; */
+  transform: scale(1);
+}
+
+.nice-place-item {
+  width: 30%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.nice-place-item:hover .nice-place-text {
+  transform: translateX(0%);
+}
+
+.nice-place-text h2 {
+  --line-clamp: 1;
+}
+
+.nice-place-item img {
+  position: absolute;
+}
+
+.nice-place-text {
+  position: absolute;
+  width: 100%;
+  /* height: 100px; */
+  bottom: 0;
+  padding: 12px;
+  background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.nice-place-text h2 {
+  color: var(--main-color);
+  margin: 0;
+}
+
+.nice-place-text i {
+  color: yellow;
+}
+
+.nice-place-text p {
+  color: white;
+  margin: 0;
+}
+
+.nice-place-text button {
+  height: 30px;
+  width: 100px;
+  background-color: var(--main-color);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.nice-place-text button:hover {
+  background-color: tomato;
+}
+
+.nice-place h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--main-color);
+  position: relative;
+}
+
+.nice-place h1::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 150px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.nice-place h1::after {
+  position: absolute;
+  content: "\2665";
+  width: 40px;
+  height: 10px;
+  color: red;
+  background-color: #fff;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
